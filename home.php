@@ -45,7 +45,10 @@
       <p>Mie goreng dengan bumbu khas</p>
       <br>
       <br>
-      <button>Pesan</button>
+      <div class="btn-group">
+      <button>+</button>
+      <button>-</button>
+      </div>
     </div>
 
     <div class="item">
