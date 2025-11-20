@@ -1,0 +1,167 @@
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: linear-gradient(135deg, #6f4e37, rgb(54, 41, 41) ); 
+    color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  background-image: url('foto/kafe.jpg');
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav{
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  background-color: #6a1b1b;
+  padding: 9px 15px;
+  border-radius: 10px;
+  margin: 0 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.font{
+  color: white;
+  text-align: center;
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  background-color: #fffdfc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.6s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.coffee-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.coffee-img:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #6b4f4f;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #503636;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;                 
+  margin-top: 10px;
+}
+
+
+.form-section {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #5b3d2e;
+}
+
+#ContactForm {
+  width: 400px;
+  margin: 10px auto;
+}
+
+input {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.submit {
+  width: 425px;
+}
+
+footer{
+  background-color: #97929212;
+  text-align: center;
+}
