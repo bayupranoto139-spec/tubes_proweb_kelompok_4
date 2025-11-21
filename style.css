@@ -110,10 +110,9 @@ button:hover {
 }
 
 .btn-group {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;                 
-  margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
 }
 
 
@@ -164,4 +163,10 @@ input {
 footer{
   background-color: #97929212;
   text-align: center;
+}
+.btn{
+  display: flex;
+
+  gap: 10px;
+  justify-content: flex-end;
 }

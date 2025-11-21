@@ -34,8 +34,11 @@
       <br>
       <br>
       <div class="btn-group">
-      <button>+</button>
-      <button>-</button>
+        <button>Pesan</button>
+        <div class="btn">
+          <button>+</button>
+          <button>-</button>
+        </div>
       </div>
     </div>
 
@@ -46,8 +49,11 @@
       <br>
       <br>
       <div class="btn-group">
-      <button>+</button>
-      <button>-</button>
+        <button>Pesan</button>
+        <div class="btn">
+          <button>+</button>
+          <button>-</button>
+        </div>
       </div>
     </div>
 
@@ -57,7 +63,13 @@
       <p>Espresso, susu UHT, dan gula aren</p>
       <br>
       <br>
-      <button>Pesan</button>
+      <div class="btn-group">
+        <button>Pesan</button>
+        <div class="btn">
+          <button>+</button>
+          <button>-</button>
+        </div>
+      </div>
     </div>
 
      <div class="item">
@@ -66,7 +78,13 @@
       <p>Espresso dan susu UHT</p>
       <br>
       <br>
-      <button>Pesan</button>
+      <div class="btn-group">
+        <button>Pesan</button>
+        <div class="btn">
+          <button>+</button>
+          <button>-</button>
+        </div>
+      </div>
     </div>
   </section>
 
