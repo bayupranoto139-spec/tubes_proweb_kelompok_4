@@ -46,8 +46,11 @@ include 'mysql.php';
       echo "<h3>" . $row['nama_menu'] . " - Rp" . number_format($row['harga'], 0, ',', '.') . "</h3>";
       echo "<p>" . $row['deskripsi'] . "</p><br><br>";
       echo "<div class='btn-group'>";
+      echo "<button class='order' data-id='" . $row['menu_id'] . "'>Pesan</button>";
+      echo "<div class='btn'>";
       echo "<button class='plus' data-id='" . $row['menu_id'] . "'>+</button>";
       echo "<button class='minus' data-id='" . $row['menu_id'] . "'>-</button>";
+      echo "</div>";
       echo "</div>";
       echo "</div>";
     }
