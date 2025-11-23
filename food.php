@@ -36,14 +36,14 @@ include 'mysql.php';
   <section class="menu">
     <?php
     // Ambil data menu dari database
-    $query = "SELECT * FROM menu LIMIT 50";
+    $query = "SELECT * FROM menu WHERE kategori = 'food' LIMIT 50";
     $result = mysqli_query($mysql, $query);
 
 
     while ($row = mysqli_fetch_assoc($result)) {
       echo "<div class='item'>";
       echo "<img src='foto/" . $row['foto'] . "' alt='" . $row['nama_menu'] . "' class='coffee-img'/>";
-      echo "<h3>" . $row['nama_menu'] . " - Rp" . number_format($row['harga'], 0, ',', '.') . "</h3>";
+      echo "<h2>" . $row['nama_menu'] . " - Rp" . number_format($row['harga'], 0, ',', '.') . "</h2>";
       echo "<p>" . $row['deskripsi'] . "</p><br><br>";
       echo "<div class='btn-group'>";
       echo "<button class='order' data-id='" . $row['menu_id'] . "'>Pesan</button>";

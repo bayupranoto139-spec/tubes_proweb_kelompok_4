@@ -15,9 +15,12 @@ $result = mysqli_query($mysql, $query);
 </head>
 <body>
     <header>
-        <h1>17 Coffee</h1>
-        <p>Leave a Message</p>
-    </header>
+    <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
+    <div class="header-text">
+      <h1>17 Coffee</h1>
+      <p>Choose Your Favourite Menu!</p>
+    </div>
+  </header>
 
   <!--Navigasi-->
 

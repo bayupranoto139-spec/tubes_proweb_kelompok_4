@@ -1,3 +1,7 @@
+<?php
+include 'mysql.php';
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -10,8 +14,11 @@
 
 <body>
   <header>
-    <h1>17 Coffee</h1>
-    <p>Choose Your Favourite Menu!</p>
+    <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
+    <div class="header-text">
+      <h1>17 Coffee</h1>
+      <p>Choose Your Favourite Menu!</p>
+    </div>
   </header>
 
   <!--Navigasi-->
@@ -27,66 +34,27 @@
   <!--Menu Minuman-->
 
   <section class="menu">
-    <div class="item">
-      <img src="foto/latte.jpeg" alt="Latte" class="coffee-img" />
-      <h3>Latte - Rp15.000</h3>
-      <p>Espresso dan susu UHT</p>
-      <br>
-      <br>
-      <button>Pesan</button>
-    </div>
+    <?php
+    // Ambil data menu dari database
+    $query = "SELECT * FROM menu WHERE kategori = 'drink' LIMIT 50";
+    $result = mysqli_query($mysql, $query);
 
-    <div class="item">
-      <img src="foto/moccacino.jpeg" alt="Moccacino" class="coffee-img" />
-      <h3>Moccacino - Rp15.000</h3>
-      <p>Espresso, coklat, dan susu UHT</p>
-      <br>
-      <br>
-      <button>Pesan</button>
-    </div>
 
-    <div class="item">
-      <img src="foto/cappuccino.jpeg" alt="Cappucino" class="coffee-img" />
-      <h3>Cappucino - Rp15.000</h3>
-      <p>Espresso, susu, dan busa susu seimbang</p>
-      <br>
-      <button>Pesan</button>
-    </div>
-
-    <div class="item">
-      <img src="foto/spanish latte.jpeg" alt="Spanish Latte" class="coffee-img" />
-      <h3>Spanish Latte - Rp15.000</h3>
-      <p>Espresso, susu UHT, dan susu kental manis</p>
-      <br>
-      <button>Pesan</button>
-    </div>
-
-    <div class="item">
-      <img src="foto/kopi susu gula aren.jpeg" alt="Kopi Gula Aren" class="coffee-img" />
-      <h3>Kopi Gula Aren - Rp15.000</h3>
-      <p>Espresso, susu UHT, dan gula aren</p>
-      <br>
-      <br>
-      <button>Pesan</button>
-    </div>
-
-    <div class="item">
-      <img src="foto/kopi karamel.jpeg" alt="Kopi Karamel" class="coffee-img" />
-      <h3>Kopi Karamel - Rp15.000</h3>
-      <p>Espresso, susu UHT, dan gula karamel</p>
-      <br>
-
-      <button>Pesan</button>
-    </div>
-
-    <div class="item">
-      <img src="foto/sanger.jpeg" alt="Kopi Sanger" class="coffee-img" />
-      <h3>Kopi Sanger - Rp12.000</h3>
-      <p>Espresso, susu, dan SKM</p>
-      <br>
-      <br>
-      <button>Pesan</button>
-    </div>
+    while ($row = mysqli_fetch_assoc($result)) {
+      echo "<div class='item'>";
+      echo "<img src='foto/" . $row['foto'] . "' alt='" . $row['nama_menu'] . "' class='coffee-img'/>";
+      echo "<h2>" . $row['nama_menu'] . " - Rp" . number_format($row['harga'], 0, ',', '.') . "</h2>";
+      echo "<p>" . $row['deskripsi'] . "</p><br><br>";
+      echo "<div class='btn-group'>";
+      echo "<button class='order' data-id='" . $row['menu_id'] . "'>Pesan</button>";
+      echo "<div class='btn'>";
+      echo "<button class='plus' data-id='" . $row['menu_id'] . "'>+</button>";
+      echo "<button class='minus' data-id='" . $row['menu_id'] . "'>-</button>";
+      echo "</div>";
+      echo "</div>";
+      echo "</div>";
+    }
+    ?>
   </section>
 
   <!--Form Pemesanan-->

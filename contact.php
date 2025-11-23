@@ -31,9 +31,12 @@ if (isset($_POST['submit'])) {
 
 <body>
     <header>
-        <h1>17 Coffee</h1>
-        <p>Leave a Message</p>
-    </header>
+    <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
+    <div class="header-text">
+      <h1>17 Coffee</h1>
+      <p>Choose Your Favourite Menu!</p>
+    </div>
+  </header>
 
   <!--Navigasi-->
 
