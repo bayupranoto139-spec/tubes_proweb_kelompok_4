@@ -25,21 +25,21 @@ session_start();
 
   <h2 class="font">Pesan Makanan Favoritmu</h2>
 
-<!-- ICON CART -->
-<div class="cart-icon" id="cart-toggle">🛒</div>
+  <!-- ICON CART -->
+  <div class="cart-icon" id="cart-toggle">🛒</div>
 
-<!-- PANEL CART -->
-<div id="cart-panel">
-    
+  <!-- PANEL CART -->
+  <div id="cart-panel">
+
     <span id="close-cart">✖</span>
 
     <div id="cart-content">
-        <h2>Keranjang</h2>
-        <div id="cart-container">
-            Memuat...
-        </div>
+      <h2>Keranjang</h2>
+      <div id="cart-container">
+        Memuat...
+      </div>
     </div>
-</div>
+  </div>
 
 
   <!--Menu Makanan-->
@@ -47,7 +47,15 @@ session_start();
   <section class="menu">
     <?php
     // Ambil data menu dari database
-    $query = "SELECT * FROM menu WHERE kategori = 'food' LIMIT 50";
+    $search = isset($_GET['search']) ? $_GET['search'] : '';
+
+    if ($search !== '') {
+      $query = "SELECT * FROM menu 
+              WHERE kategori = 'food' 
+              AND nama_menu LIKE '%$search%'";
+    } else {
+      $query = "SELECT * FROM menu WHERE kategori = 'food'";
+    }
     $result = mysqli_query($mysql, $query);
 
 

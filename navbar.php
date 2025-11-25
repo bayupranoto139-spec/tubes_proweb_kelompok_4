@@ -11,4 +11,9 @@
     <a href="drink.php">Drink</a>
     <a href="food.php">Food</a>
     <a href="contact.php">Contact</a>
+
+    <form action="food.php" method="GET" class="nav-search">
+    <input type="text" name="search" placeholder="Cari menu..." required>
+    <button type="submit" class="search-btn">🔍</button>
+    </form>
 </nav>
