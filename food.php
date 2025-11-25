@@ -16,23 +16,13 @@ session_start();
 </head>
 
 <body>
-  <header>
-    <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
-    <div class="header-text">
-      <h1>17 Coffee</h1>
-      <p>Choose Your Favourite Menu!</p>
-    </div>
-  </header>
 
   <!--Navigasi-->
 
-  <nav>
-    <a href="home.php">Home</a>
-    <a href="drink.php">Drink</a>
-    <a href="food.php">Food</a>
-    <a href="contact.php">Contact</a>
+  <?php
+  include 'navbar.php';
+  ?>
 
-  </nav>
   <h2 class="font">Pesan Makanan Favoritmu</h2>
 
 <!-- ICON CART -->
