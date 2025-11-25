@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Daftar Akun - Kedai Kopi Senja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleLogin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="steam"></div>
+    <div class="steam"></div>
+
+    <div class="header">
+      <div class="logo-cup"></div>
+      <div class="header-text">
+        <h1>Daftar Akun Baru</h1>
+        <p>Biar pesanan kopimu tersimpan rapi ☕</p>
+      </div>
+    </div>
+
+    <p class="tagline">
+      Isi data di bawah untuk bergabung dengan <span>Kedai Kopi Senja</span>.
+    </p>
+
+    <!-- form mengarah ke register.php -->
+    <form id="registerForm" action="register.php" method="POST">
+      <div class="form-group">
+        <label for="reg_username">Nama Pengguna</label>
+        <div class="input-wrapper">
+          <span class="icon">👤</span>
+          <input
+            type="text"
+            id="reg_username"
+            name="username"
+            placeholder="pilih nama pengguna"
+            autocomplete="off"
+            required
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="reg_password">Kata Sandi</label>
+        <div class="input-wrapper">
+          <span class="icon">🔒</span>
+          <input
+            type="password"
+            id="reg_password"
+            name="password"
+            placeholder="minimal 6 karakter"
+            required
+          >
+            <span class="toggle-pass" data-target="reg_password">👁</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="reg_password2">Konfirmasi Kata Sandi</label>
+        <div class="input-wrapper">
+          <span class="icon">✅</span>
+          <input
+            type="password"
+            id="reg_password2"
+            name="password_confirm"
+            placeholder="ulang kata sandi"
+            required
+          >
+            <span class="toggle-pass" data-target="reg_password">👁</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-login">Buat Akun</button>
+
+      <div id="reg_error" class="error-message"></div>
+    </form>
+
+    <div class="footer">
+      Sudah punya akun?
+      <a href="index.html" style="color:#f5b25d;text-decoration:none;">
+        Masuk di sini.
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

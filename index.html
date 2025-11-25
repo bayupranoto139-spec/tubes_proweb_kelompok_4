@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Kedai Kopi Senja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleLogin.css">
+</head>
+<body>
+  <div class="container">
+    <div class="steam"></div>
+    <div class="steam"></div>
+
+    <div class="header">
+      <div class="logo-cup"></div>
+      <div class="header-text">
+        <h1>Kedai Kopi Senja</h1>
+        <p>Masuk untuk menikmati racikan favoritmu</p>
+      </div>
+    </div>
+
+    <p class="tagline">
+      Satu akun, sejuta <span>cerita</span> di setiap cangkir kopi.
+    </p>
+
+    <!-- form mengarah ke login.php -->
+    <form id="loginForm" action="login.php" method="POST">
+      <div class="form-group">
+        <label for="username">Nama Pengguna</label>
+        <div class="input-wrapper">
+          <span class="icon">👤</span>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="contoh: barista"
+            autocomplete="off"
+            required
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Kata Sandi</label>
+        <div class="input-wrapper">
+          <span class="icon">🔒</span>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            required
+          >
+            <span class="toggle-pass" data-target="password">👁</span>
+        </div>
+      </div>
+
+      <div class="helper-row">
+        <label style="display:flex;align-items:center;gap:6px;">
+          <input type="checkbox" id="remember" style="accent-color:#f5b25d;">
+          <span>Ingat saya</span>
+        </label>
+        <a href="#">Lupa sandi?</a>
+      </div>
+
+      <button type="submit" class="btn-login">Masuk ke Kedai</button>
+
+      <div id="error" class="error-message"></div>
+    </form>
+    
+<div class="footer">
+  Belum punya akun?
+  <a href="register.html" style="color:#f5b25d;text-decoration:none;">
+    Daftar di sini.
+  </a>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
