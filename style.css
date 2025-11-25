@@ -87,6 +87,15 @@ nav{
     margin-top: -2px;
 }
 
+.no-result {
+    font-size: 20px;
+    color: #ffff;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+
 nav a {
   text-decoration: none;
   color: black;

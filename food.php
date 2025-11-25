@@ -56,7 +56,12 @@ session_start();
     } else {
       $query = "SELECT * FROM menu WHERE kategori = 'food'";
     }
+
     $result = mysqli_query($mysql, $query);
+
+    if (mysqli_num_rows($result) == 0) {
+    echo "<p class='no-result'>Menu tidak ditemukan.</p>";
+}
 
 
     while ($row = mysqli_fetch_assoc($result)) {

@@ -46,8 +46,21 @@ session_start();
   <section class="menu">
     <?php
     // Ambil data menu dari database
-    $query = "SELECT * FROM menu WHERE rekomendasi = 'yes' LIMIT 50";
+    $search = isset($_GET['search']) ? $_GET['search'] : '';
+
+    if ($search !== '') {
+      $query = "SELECT * FROM menu 
+              WHERE rekomendasi = 'yes' 
+              AND nama_menu LIKE '%$search%'";
+    } else {
+      $query = "SELECT * FROM menu WHERE rekomendasi = 'yes'";
+    }
+
     $result = mysqli_query($mysql, $query);
+
+    if (mysqli_num_rows($result) == 0) {
+    echo "<p class='no-result'>Menu tidak ditemukan.</p>";
+}
 
 
     while ($row = mysqli_fetch_assoc($result)) {
