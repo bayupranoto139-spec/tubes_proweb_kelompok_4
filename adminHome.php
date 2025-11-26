@@ -9,59 +9,69 @@ session_start();
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>☕17 COFFEE - Home</title>
-  <link rel="stylesheet" href="style.css?v=<?= filemtime(__DIR__ . '/style.css') ?>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☕17 COFFEE - Home</title>
+    <link rel="stylesheet" href="style.css?v=<?= filemtime(__DIR__ . '/style.css') ?>">
 </head>
 
 <body>
 
     <header>
-    <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
-    <div class="header-text">
-      <h1>17 COFFEE</h1>
-      <p>Choose Your Favourite Menu!</p>
-    </div>
-</header>
+        <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
+        <div class="header-text">
+            <h1>17 COFFEE</h1>
+            <p>Choose Your Favourite Menu!</p>
+        </div>
+    </header>
 
     <nav>
-    <a href="adminHome.php">Home</a>
-    <a href="adminAddMenu.php">Edit Menu</a>
+        <a href="adminHome.php">Home</a>
+        <a href="adminAddMenu.php">Edit Menu</a>
+        <a href="isi_pesan.php">Feedback</a>
     </nav>
-  
-  <h2 class="font">Rekomendasi Menu Untukmu</h2>
+
+    <h2 class="font">Rekomendasi Menu Untukmu</h2>
 
 
-  <!--Menu Rekomendasi-->
+    <!--Menu Rekomendasi-->
 
-  <section class="menu">
-    <?php
-    // Ambil data menu dari database
-    $search = isset($_GET['search']) ? $_GET['search'] : '';
+    <section class="menu">
+        <?php
+        // Ambil data menu dari database
+        $search = isset($_GET['search']) ? $_GET['search'] : '';
 
-    $query = "SELECT * FROM menu";
+        $query = "SELECT * FROM menu";
 
-    $result = mysqli_query($mysql, $query);
+        $result = mysqli_query($mysql, $query);
 
 
-    while ($row = mysqli_fetch_assoc($result)) {
-      echo "<div class='item'>";
-      echo "<img src='foto/" . $row['foto'] . "' alt='" . $row['nama_menu'] . "' class='coffee-img'/>";
-      echo "<h2>" . $row['nama_menu'] . " - Rp" . number_format($row['harga'], 0, ',', '.') . "</h2>";
-      echo "<p>" . $row['deskripsi'] . "</p><br><br>";
-      echo "</div>";
-    }
-    ?>
-  </section>
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<div class='item'>";
+            echo "<img src='foto/" . $row['foto'] . "' alt='" . $row['nama_menu'] . "' class='coffee-img'/>";
+            echo "<h2>" . $row['nama_menu'] . " - Rp" . number_format($row['harga'], 0, ',', '.') . "</h2>";
+            echo "<p>" . $row['deskripsi'] . "</p><br><br>";
+            echo "<div class='btn-group'>";
+            echo "<a href='adminDelete.php?id=" . $row['menu_id'] . "' 
+            class='delete-btn' 
+            onclick=\"return confirm('Yakin ingin menghapus menu ini?')\">
+            Hapus
+            </a>";
+            echo "</div>";
+            echo "</div>";
 
-  <!--Footer-->
+        }
+        ?>
+    </section>
 
-  <footer class="font">
-    <p> © Copyright by kelompok 5 2025</p>
-  </footer>
 
-  <script src="cart.js"></script>
+    <!--Footer-->
+
+    <footer class="font">
+        <p> © Copyright by kelompok 5 2025</p>
+    </footer>
+
+    <script src="cart.js"></script>
 
 </body>
 

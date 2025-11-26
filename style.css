@@ -293,6 +293,12 @@ button:hover {
   margin-top: auto;
 }
 
+.btn{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
 
 .form-section {
   margin-top: 40px;
@@ -341,11 +347,7 @@ footer{
   background-color: transparent;
   text-align: center;
 }
-.btn{
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-}
+
 /* Styling untuk tabel yang nyaman dilihat */
 #tampilan {
     margin: auto;
@@ -482,4 +484,20 @@ tbody {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* admin */
+.delete-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
 }
