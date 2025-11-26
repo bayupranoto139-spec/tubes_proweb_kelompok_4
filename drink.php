@@ -72,7 +72,7 @@ session_start();
       echo "<button class='order' data-id='" . $row['menu_id'] . "'>Pesan</button>";
       echo "<div class='btn'>";
       echo "<button class='plus' data-id='" . $row['menu_id'] . "'>+</button>";
-      echo '<span id="qty-' . $row['menu_id'] . '">0</span>';
+      echo '<span class="zero" id="qty-' . $row['menu_id'] . '">0</span>';
       echo "<button class='minus' data-id='" . $row['menu_id'] . "'>-</button>";
       echo "</div>";
       echo "</div>";
