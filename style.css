@@ -56,6 +56,19 @@ nav{
     z-index: 9999;
 }
 
+nav a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  background-color: #6a1b1b;
+  padding: 9px 15px;
+  border-radius: 10px;
+  margin: 0 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: white;
+}
+
 .nav-search {
     display: flex;
     align-items: center;
@@ -93,20 +106,6 @@ nav{
     text-align: center;
     margin-top: 30px;
     font-weight: bold;
-}
-
-
-nav a {
-  text-decoration: none;
-  color: black;
-  text-align: center;
-  background-color: #6a1b1b;
-  padding: 9px 15px;
-  border-radius: 10px;
-  margin: 0 5px;
-  font-weight: bold;
-  transition: 0.3s;
-  background-color: white;
 }
 
 .cart-icon {

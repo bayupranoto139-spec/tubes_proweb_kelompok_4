@@ -27,7 +27,7 @@ $stmt = $mysql->prepare("INSERT INTO menu (nama_menu, harga, deskripsi, kategori
 $stmt->bind_param("sisss", $nama_menu, $harga, $deskripsi, $kategori, $foto);
 
 if ($stmt->execute()) {
-    echo "<script>alert('Menu berhasil ditambahkan!'); window.location='add_menu.php';</script>";
+    echo "<script>alert('Menu berhasil ditambahkan!'); window.location='adminAddMenu.php';</script>";
 } else {
     echo "<script>alert('Gagal menambahkan menu!'); history.back();</script>";
 }
