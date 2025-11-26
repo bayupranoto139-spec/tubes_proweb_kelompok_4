@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
             if ($row["role"] === "admin") {
-                header("Location: contact.php");
+                header("Location: homeAdmin.php");
             } else {
                 header("Location: home.php");
             }
