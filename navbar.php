@@ -1,7 +1,7 @@
 <header>
     <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
     <div class="header-text">
-      <h1>17 Coffee</h1>
+      <h1>17 COFFEE</h1>
       <p>Choose Your Favourite Menu!</p>
     </div>
 </header>

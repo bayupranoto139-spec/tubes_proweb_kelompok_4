@@ -15,5 +15,5 @@ if (isset($_SESSION['cart'][$menu_id])) {
     $_SESSION['cart'][$menu_id] = $jumlah;
 }
 
-echo "Item ditambahkan ke keranjang!";
+echo "Ok";
 ?>

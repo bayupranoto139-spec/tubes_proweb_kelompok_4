@@ -33,7 +33,7 @@ document.addEventListener("click", function(e) {
         form.append("menu_id", id);
         form.append("jumlah", jumlah);
 
-        fetch("add_to_cart.php", {
+        fetch("addCart.php", {
             method: "POST",
             body: form
         })

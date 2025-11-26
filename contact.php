@@ -23,14 +23,14 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>☕17 Coffee - Contact</title>
+    <title>☕17 COFFEE - Contact</title>
     <link rel="stylesheet" href="style.css?v=<?= filemtime(__DIR__ . '/style.css') ?>">
 </head>
 <body>
     <header>
         <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
         <div class="header-text">
-            <h1>17 Coffee</h1>
+            <h1>17 COFFEE</h1>
             <p>Choose Your Favourite Menu!</p>
         </div>
     </header>
