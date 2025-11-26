@@ -89,19 +89,6 @@ if (isset($_POST['submit'])) {
     <footer class="font">
         <p>© Copyright by kelompok 5 2025</p>
     </footer>
-
-    <script>
-        // Auto hide notification setelah 3 detik
-        const notification = document.querySelector('.notification');
-        if (notification) {
-            setTimeout(() => {
-                notification.style.transition = 'opacity 0.5s ease';
-                notification.style.opacity = '0';
-                setTimeout(() => {
-                    notification.remove();
-                }, 500);
-            }, 3000);
-        }
-    </script>
+    <script src="contact.js"></script>
 </body>
 </html>
