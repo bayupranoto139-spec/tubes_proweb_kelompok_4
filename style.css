@@ -501,3 +501,76 @@ tbody {
 .delete-btn:hover {
     background: #b02a37;
 }
+
+/* Hamburger default */
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    padding: 5px 10px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar Position */
+#main-nav {
+    position: relative;
+}
+
+/* Desktop: normal */
+#main-nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ========== MOBILE OVERLAY MENU ========== */
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        z-index: 9999;
+    }
+
+    /* Overlay box (MENU FULLSCREEN) */
+    #main-nav .nav-links {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;           /* bisa 100% jika mau fullscreen */
+        height: 100vh;
+        background: inherit;  /* pakai warna navbar lama */
+        padding-top: 80px;
+        padding-left: 20px;
+        transition: 0.3s ease;
+        z-index: 9998;
+    }
+
+    /* When active, slide-in from right */
+    #main-nav .nav-links.show-nav {
+        right: 0;
+    }
+
+    /* Item menu berbentuk list ke bawah */
+    #main-nav .nav-links a {
+        display: block;
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    /* Search bar ikut tampil di panel */
+    .nav-search {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .nav-search input {
+        width: 100%;
+    }
+}
