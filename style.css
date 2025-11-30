@@ -579,3 +579,60 @@ transform: translate(-50%, -50%);
         width: 100%;
     }
 }
+
+/* ===== FORM CONTAINER ===== */
+#AdminAddForm {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* ===== FORM LABEL ===== */
+#AdminAddForm label {
+    font-weight: bold;
+    margin-top: 12px;
+    display: block;
+}
+
+/* ===== INPUTS ===== */
+#AdminAddForm input,
+#AdminAddForm textarea,
+#AdminAddForm select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* ===== TEXTAREA ===== */
+#AdminAddForm textarea {
+    resize: none;
+    height: 85px;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+#AdminAddForm button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #6f4e37;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#AdminAddForm button:hover {
+    background: #513a28;
+}

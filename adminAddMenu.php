@@ -11,8 +11,10 @@ if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "admin") {
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>☕17 COFFEE - Admin</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="style.css?v=<?= filemtime(__DIR__ . '/style.css') ?>">
 </head>
 
 <body>
@@ -25,13 +27,16 @@ if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "admin") {
         </div>
     </header>
 
-    <nav>
-        <a href="adminHome.php">Home</a>
-        <a href="adminAddMenu.php">Edit Menu</a>
-        <a href="isi_pesan.php">Feedback</a>
+    <nav id="main-nav">
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <div class="nav-links" id="navLinks">
+            <a href="adminHome.php">Home</a>
+            <a href="adminAddMenu.php">Add Menu</a>
+            <a href="isi_pesan.php">Feedback</a>
+        </div>
     </nav>
 
-    <h2>Tambah Menu Baru</h2>
+    <h2 class="font">Tambah Menu Baru</h2>
 
     <div id="AdminAddForm">
 
@@ -60,7 +65,12 @@ if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "admin") {
 
     </div>
 
-
+  <script src="cart.js?v=<?= time() ?>"></script>
+  <script>
+document.getElementById("navToggle").onclick = function () {
+    document.getElementById("navLinks").classList.toggle("show-nav");
+};
+</script>
 </body>
 
 </html>

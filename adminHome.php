@@ -11,7 +11,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>☕17 COFFEE - Home</title>
+    <title>☕17 COFFEE - Admin</title>
     <link rel="stylesheet" href="style.css?v=<?= filemtime(__DIR__ . '/style.css') ?>">
 </head>
 
@@ -25,13 +25,16 @@ session_start();
         </div>
     </header>
 
-    <nav>
-        <a href="adminHome.php">Home</a>
-        <a href="adminAddMenu.php">Edit Menu</a>
-        <a href="isi_pesan.php">Feedback</a>
+    <nav id="main-nav">
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <div class="nav-links" id="navLinks">
+            <a href="adminHome.php">Home</a>
+            <a href="adminAddMenu.php">Add Menu</a>
+            <a href="isi_pesan.php">Feedback</a>
+        </div>
     </nav>
 
-    <h2 class="font">Rekomendasi Menu Untukmu</h2>
+    <h2 class="font">Daftar Menu</h2>
 
 
     <!--Menu Rekomendasi-->
@@ -71,7 +74,12 @@ session_start();
         <p> © Copyright by kelompok 5 2025</p>
     </footer>
 
-    <script src="cart.js"></script>
+  <script src="cart.js?v=<?= time() ?>"></script>
+  <script>
+document.getElementById("navToggle").onclick = function () {
+    document.getElementById("navLinks").classList.toggle("show-nav");
+};
+</script>
 
 </body>
 

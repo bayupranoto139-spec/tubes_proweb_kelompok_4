@@ -19,17 +19,18 @@ $result = mysqli_query($mysql, $query);
     <header>
         <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
         <div class="header-text">
-            <h1>17 Coffee</h1>
+            <h1>17 COFFEE</h1>
             <p>Choose Your Favourite Menu!</p>
         </div>
     </header>
 
-    <!--Navigasi-->
-
-    <nav>
-        <a href="adminHome.php">Home</a>
-        <a href="adminAddMenu.php">Edit Menu</a>
-        <a href="isi_pesan.php">Feedback</a>
+    <nav id="main-nav">
+        <button class="nav-toggle" id="navToggle">☰</button>
+        <div class="nav-links" id="navLinks">
+            <a href="adminHome.php">Home</a>
+            <a href="adminAddMenu.php">Add Menu</a>
+            <a href="isi_pesan.php">Feedback</a>
+        </div>
     </nav>
     <h2 class="font">Contact Us</h2>
 
@@ -63,6 +64,15 @@ $result = mysqli_query($mysql, $query);
     <footer class="font">
         <p> © Copyright by kelompok 5 2025</p>
     </footer>
+
+    </footer>
+
+  <script src="cart.js?v=<?= time() ?>"></script>
+  <script>
+document.getElementById("navToggle").onclick = function () {
+    document.getElementById("navLinks").classList.toggle("show-nav");
+};
+</script>
 </body>
 
 </html>
