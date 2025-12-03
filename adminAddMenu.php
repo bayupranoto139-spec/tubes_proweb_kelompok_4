@@ -21,12 +21,13 @@ if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "admin") {
     <div id="notif-area"></div>
 
 <nav class="lux-nav">
-    <h2>17 COFFEE</h2>
+    <h2>17 COFFEE - Admin</h2>
 
     <div class="nav-right">
         <a href="adminHome.php">🏠</a>
         <a href="adminAddMenu.php">🍽️</a>
         <a href="isi_pesan.php">✉️</a>
+        <a href="proses_pesanan.php">🧾</a>
     </div>
 </nav>
 

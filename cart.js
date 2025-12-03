@@ -196,3 +196,8 @@ function confirmDelete(id) {
 
     box.style.display = "block";
 }
+function hapusPesanan(id) {
+    if (confirm("Yakin ingin menghapus pesanan ini?")) {
+        window.location.href = "hapus_pesan.php?id=" + id;
+    }
+}
