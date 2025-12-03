@@ -27,23 +27,17 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="style.css?v=<?= filemtime(__DIR__ . '/style.css') ?>">
 </head>
 <body>
-    <header>
-        <img src="foto/kafe.jpg" alt="Header Image" class="header-img">
-        <div class="header-text">
-            <h1>17 COFFEE</h1>
-            <p>Choose Your Favourite Menu!</p>
-        </div>
-    </header>
 
-    <nav id="main-nav">
-    <button class="nav-toggle" id="navToggle">☰</button>
-    <div class="nav-links" id="navLinks">
-        <a href="home.php">Home</a>
-        <a href="drink.php">Drink</a>
-        <a href="food.php">Food</a>
-        <a href="contact.php">Contact</a>
+<nav class="lux-nav">
+    <h2>17 COFFEE</h2>
+
+    <div class="nav-right">
+        <a href="home.php">🏠</a>
+        <a href="food.php">🍽️</a>
+        <a href="drink.php">🥤</a>
+        <a href="contact.php">✉️</a>
     </div>
-    </nav>
+</nav>
 
     <!-- TAMBAHKAN NOTIFIKASI DI SINI -->
     <?php if (isset($success)): ?>
@@ -58,7 +52,15 @@ if (isset($_POST['submit'])) {
         </div>
     <?php endif; ?>
 
-    <h2 class="font">Contact Us</h2>
+    <div class="hero-header">
+    <img src="foto/kafe.jpg" class="hero-img">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-text">
+        <h1>Contact Us</h1>
+        <p>Berikan masukan kepada kami ✨</p>
+    </div>
+</div>
 
     <form action="" method="POST" id="ContactForm">
         <div>
@@ -75,21 +77,18 @@ if (isset($_POST['submit'])) {
         </div>
         <div>
             <label for="pesan"></label>
-            <input type="text" id="pesan" name="pesan" required placeholder="Masukkan Pesan">
+            <input type="textarea" id="pesan" name="pesan" required placeholder="Masukkan Pesan">
         </div>
-        <button type="submit" name="submit">Kirim</button>
+        <button class="contact-btn" type="submit" name="submit">Kirim</button>
     </form>
 
-    <div class="font">
+    <footer>
         <p>Kamu bisa menghubungi kami melalui:</p>
         📍Alamat: Jl. Pikopi No.222
         <br>
         📷Instagram: @kopkop.17
         <br>
         📞No. HP: 086543210987
-    </div>
-
-    <footer class="font">
         <p>© Copyright by kelompok 5 2025</p>
     </footer>
     <script src="contact.js"></script>

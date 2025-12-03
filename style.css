@@ -1,120 +1,64 @@
-html, body {
-    font-family: Arial, sans-serif;
+/* ===== GLOBAL ===== */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background: linear-gradient(135deg, #6f4e37, rgb(54, 41, 41) ); 
-    color: #333;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-header {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
+body {
+    background: linear-gradient(135deg, #2c1e1b, #000);
+    color: white;
+    overflow-x: hidden;
 }
 
-
-.header-img {
-  width: 100%;
-  height: 100%;
-}
-
-.header-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
-.header-text h1 {
-  font-size: 48px;
-  margin: 0;
-}
-
-.header-text p {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-
-nav{
+/* ===== NAVBAR ===== */
+.lux-nav {
     position: fixed;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #6f4e37, rgb(54, 41, 41) ); 
-    padding: 15px 0;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    padding: 15px 25px;
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    backdrop-filter: blur(5px);
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
     z-index: 9999;
 }
 
-nav a {
-  text-decoration: none;
-  color: black;
-  text-align: center;
-  background-color: #6a1b1b;
-  padding: 9px 15px;
-  border-radius: 10px;
-  margin: 0 5px;
-  font-weight: bold;
-  transition: 0.3s;
-  background-color: white;
+.lux-nav h2 {
+    color: #eac784;
+    font-size: 22px;
+    letter-spacing: 1px;
 }
 
-.nav-search {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.nav-search input {
+.lux-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    background: rgba(255,255,255,0.1);
     padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-    margin-top: -1px;
+    border-radius: 10px;
+    transition: .25s;
 }
-
-.nav-search button {
-    background: #ffffff;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-.nav-search .search-btn {
-    padding: 8px 12px;
-    background: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: -2px;
-}
-
-.no-result {
-    font-size: 20px;
-    color: #ffff;
-    text-align: center;
-    margin-top: 30px;
-    font-weight: bold;
+.lux-nav a:hover {
+    background: rgba(255,255,255,0.2);
+    color: #eac784;
 }
 
 .cart-icon {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     cursor: pointer;
     font-size: 28px;
-    background: #ffff;
+    background: #eac784;
     padding: 10px 15px;
     border-radius: 50%;
     color: white;
@@ -129,13 +73,19 @@ nav a {
     right: 0;
     width: 350px;
     height: 100%;
+    color: black;
     background: white;
-    border-left: 3px solid #6a1b1b;
+    border-left: 3px solid black;
     padding: 0; /* penting! */
     overflow: hidden; /* penting! */
     box-shadow: -2px 0 10px rgba(0,0,0,0.2);
     z-index: 99999 !important;
     transition: right 0.3s ease;
+}
+
+.test {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 #close-cart {
@@ -155,7 +105,7 @@ nav a {
 .checkout-btn {
     width: 100%;
     padding: 12px;
-    background: #6a1b1b;
+    background: #eac784;
     color: white;
     border: none;
     font-size: 18px;
@@ -165,7 +115,7 @@ nav a {
 }
 
 .checkout-btn:hover {
-    background: #4d1010;
+    background: #c7a76c;
 }
 
 .cart-controls {
@@ -184,504 +134,234 @@ nav a {
     padding: 5px 10px;
 }
 
-
-
-.font{
-  color: white;
-  text-align: center;
+.cart-minus {
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Animasi */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.cart-plus {
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  color: #ffff;
+.cart-delete {
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.card h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 8px;
-  min-height: 40px;   
+/* ===== HERO HEADER ===== */
+.hero-header {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    margin-bottom: 25px;
 }
 
-.card p {
-  margin: 0 10px 10px 10px;
-  text-align: left;
-  min-height: 50px;   
-  display: flex;
-  align-items: flex-start;
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.item {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 10px;
-  background: radial-gradient(circle at top, #f6e1c3, #3b2f2f);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  animation: fadeInUp 0.6s ease-in-out;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  min-height: 380px;   /* nilai aman, bisa disesuaikan */
-  display: flex;
-  flex-direction: column;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
 }
 
-.item:hover {
-  transform: scale(1.05);
+.hero-text {
+    position: absolute;
+    text-align: center;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.item img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.hero-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #eac784;
 }
 
-.coffee-img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
+.hero-text p {
+    font-size: 18px;
+    margin-top: 10px;
 }
 
-.coffee-img:hover {
-  transform: scale(1.05);
+/* ==== MENU GRID ==== */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 25px;
+    margin-top: 15px;
 }
 
-.zero{
-  padding-top: 7px;
+.menu-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 18px;
+    transition: .25s;
+    text-align: center;
 }
 
-button {
-  background-color: #6b4f4f;
-  color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
-button:hover {
-  background-color: #503636;
+.menu-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
 }
 
-.btn-group {
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
+.menu-price {
+    color: #eac784;
+    margin-top: 6px;
+    font-weight: bold;
 }
 
-.btn{
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
+.menu-desc {
+    font-size: 14px;
+    opacity: .85;
+    margin: 10px 0 14px;
+}
+
+/* Quantity Buttons */
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-box button {
+    background: #eac784;
+    color: #000;
+    font-size: 16px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.qty-box button:hover {
+    background: #c7a76c;
+}
+
+.zero {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Order button */
+.order {
+    background: #eac784;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .25s;
+}
+.order:hover {
+    background: #c7a76c;
+}
+
+.menu-action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
 }
 
 
-.form-section {
-  margin-top: 40px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* ===== CONTACT PAGE ===== */
+.contact-section {
+    padding: 35px;
+    display: flex;
+    justify-content: center;
 }
 
-form button {
-  margin-top: 20px;
-  padding: 10px;
-  width: 100%;
-  background-color: #6f4e37;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
+.contact-card {
+    width: 450px;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(12px);
+    text-align: center;
 }
 
-form button:hover {
-  background-color: #5b3d2e;
+.contact-card h2 {
+    color: #eac784;
+    margin-bottom: 15px;
 }
-
-#ContactForm {
+#ContactForm{
   width: 400px;
   margin: 10px auto;
 }
 
-input {
-  display: block;
-  width: 100%;
-  max-width: 385px;
-  margin-top: 10px;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.submit {
-  width: 425px;
-}
-
-footer{
-  background-color: transparent;
-  text-align: center;
-}
-
-/* Styling untuk tabel yang nyaman dilihat */
-#tampilan {
-    margin: auto;
-    width: 90%;
-    max-width: 1200px;
-    border-collapse: collapse;
-    margin-bottom: 50px;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-#tampilan thead {
-    background-color: #5c3d2e;
-}
-
-#tampilan .atas {
-    background-color: #5c3d2e;
-    color: white;
-}
-
-#tampilan th {
-    padding: 15px 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    color: white;
-    border-bottom: 3px solid #8b5e3c;
-}
-
-/* Styling untuk body tabel */
-tbody {
-    text-align: center;
-}
-
-#tampilan .isi {
-    background: none;
-    transition: background-color 0.3s ease;
-}
-
-#tampilan .isi:hover {
-    background-color: rgba(139, 94, 60, 0.1);
-}
-
-#tampilan td {
-    padding: 12px 20px;
-    color: #333;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(139, 94, 60, 0.2);
-}
-
-/* Warna berbeda untuk baris ganjil-genap */
-#tampilan .isi:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-#tampilan .isi:nth-child(odd) {
-    background-color: rgba(242, 235, 230, 0.5);
-}
-
-/* Hover effect yang lebih menarik */
-#tampilan .isi:hover {
-    background-color: rgba(139, 94, 60, 0.2);
-    transform: scale(1.01);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling untuk kolom tertentu */
-#tampilan td:first-child {
-    font-weight: bold;
-    color: #5c3d2e;
-    text-align: center;
-    width: 50px;
-}
-
-/* Responsive design */
-@media screen and (max-width: 768px) {
-    #tampilan {
-        width: 95%;
-        font-size: 14px;
-    }
-    
-    #tampilan th,
-    #tampilan td {
-        padding: 10px 12px;
-    }
-    
-    /* Sembunyikan kolom ID di mobile */
-    #tampilan th:first-child,
-    #tampilan td:first-child {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Tabel scroll horizontal di layar kecil */
-    #tampilan {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-}
-.notification {
-  position: fixed;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 500;
-  animation: slideDown 0.5s ease-out;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  z-index: 99999;
-}
-
-.notification.success {
-  background-color: #FFFFFF;
-  color: #000000;
-  border: 2px solid #795548;
-}
-
-.notification.error {
-  background-color: #FFFFFF;
-  color: #000000;
-  border: 2px solid #dc3545;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -50%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-/* admin */
-.delete-btn {
-    display: inline-block;
-    padding: 8px 12px;
-    background: #dc3545;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.delete-btn:hover {
-    background: #b02a37;
-}
-
-/* Hamburger default */
-.nav-toggle {
-    display: none;
-    font-size: 28px;
-    padding: 5px 10px;
-    color: white;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-/* Navbar Position */
-#main-nav {
-    position: relative;
-}
-
-/* Desktop: normal */
-#main-nav .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* ========== MOBILE OVERLAY MENU ========== */
-@media (max-width: 768px) {
-
-    /* Show hamburger */
-    .nav-toggle {
-        display: block;
-        position: absolute;
-        right: 15px;
-        top: 10px;
-        z-index: 9999;
-    }
-
-    /* Overlay box (MENU FULLSCREEN) */
-    #main-nav .nav-links {
-        display: block;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;           /* bisa 100% jika mau fullscreen */
-        height: 100vh;
-        background: inherit;  /* pakai warna navbar lama */
-        padding-top: 80px;
-        padding-left: 20px;
-        transition: 0.3s ease;
-        z-index: 9998;
-    }
-
-    /* When active, slide-in from right */
-    #main-nav .nav-links.show-nav {
-        right: 0;
-    }
-
-    /* Item menu berbentuk list ke bawah */
-    #main-nav .nav-links a {
-        display: block;
-        margin: 15px 0;
-        font-size: 18px;
-    }
-
-    /* Search bar ikut tampil di panel */
-    .nav-search {
-        width: 90%;
-        margin-top: 20px;
-    }
-
-    .nav-search input {
-        width: 100%;
-    }
-}
-
-/* ===== FORM CONTAINER ===== */
-#AdminAddForm {
-    width: 90%;
-    max-width: 500px;
-    margin: auto;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    border-radius: 15px;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-/* ===== FORM LABEL ===== */
-#AdminAddForm label {
-    font-weight: bold;
-    margin-top: 12px;
-    display: block;
-}
-
-/* ===== INPUTS ===== */
-#AdminAddForm input,
-#AdminAddForm textarea,
-#AdminAddForm select {
+#ContactForm input,
+#ContactForm textarea {
     width: 100%;
     padding: 10px;
-    border-radius: 8px;
+    margin-top: 12px;
+    border-radius: 10px;
     border: none;
-    margin-top: 5px;
-    font-size: 15px;
-    box-sizing: border-box;
+    outline: none;
 }
 
-/* ===== TEXTAREA ===== */
-#AdminAddForm textarea {
-    resize: none;
-    height: 85px;
-}
-
-/* ===== SUBMIT BUTTON ===== */
-#AdminAddForm button {
-    margin-top: 15px;
+.contact-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
-    background: #6f4e37;
-    color: white;
+    background: #eac784;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.25s;
+    transition: .25s;
+}
+.contact-btn:hover {
+    background: #c7a76c;
 }
 
-#AdminAddForm button:hover {
-    background: #513a28;
-}
-
-
-/* Hapus menu admin */
-#confirm-mini {
+/* ===== NOTIFICATION ===== */
+#notif-area {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99999;
-    display: none;
 }
 
-#confirm-mini .notification {
-    width: 280px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
+.notification {
     background: #fff;
-    border: 2px solid #795548;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    animation: fadeIn 0.3s ease;
+    padding: 14px 20px;
+    border-radius: 10px;
+    color: #000;
+    border: 2px solid #eac784;
+    font-weight: 500;
+    min-width: 260px;
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeInUp .4s ease;
 }
 
-#confirm-mini button {
-    padding: 8px 15px;
-    border: none;
-    margin: 10px 8px 0;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.2s;
+.notification.error {
+    border-color: #ff4444;
 }
 
-#confirm-mini button:first-child {
-    background: #6f4e37;
-    color: white;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate(-50%, -30px); }
+    to   { opacity: 1; transform: translate(-50%, 0); }
 }
 
-#confirm-mini button:first-child:hover {
-    background: #4e3526;
-}
-
-#confirm-mini button:last-child {
-    background: #dcdcdc;
-}
-
-#confirm-mini button:last-child:hover {
-    background: #bfbfbf;
+footer{
+    text-align: center;
 }
