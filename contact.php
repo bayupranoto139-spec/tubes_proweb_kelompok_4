@@ -11,10 +11,12 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($mysql, $query);
 
     if (!$result) {
-        $error = "Error: " . mysqli_error($mysql);
-    } else {
-        $success = "Pesan berhasil terkirim! Terima kasih telah menghubungi kami.";
-    }
+    $error = "Error: " . mysqli_error($mysql);
+} else {
+    header("Location: contact.php?status=success");
+    exit;
+}
+
 }
 ?>
 
