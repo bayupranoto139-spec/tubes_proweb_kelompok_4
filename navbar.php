@@ -10,7 +10,7 @@
 
     <div class="search-container">
         <form method="GET" action="">
-            <input type="text" name="search" placeholder="Cari menu makanan..."
+            <input type="text" name="search" placeholder="Cari menu..."
                    value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
             <button type="submit">✧⌕</button>
         </form>

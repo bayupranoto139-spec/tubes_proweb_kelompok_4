@@ -28,8 +28,8 @@ $result = mysqli_query($mysql, $query);
         <div class="hero-overlay"></div>
 
         <div class="hero-text">
-            <h1>Makanan Favorit</h1>
-            <p>Pilih menu makanan terbaik untuk temani harimu ✨</p>
+            <h1>Ulasan Pelanggan</h1>
+            <p>Lihat ulasan dari pelanggan</p>
         </div>
     </div>
 

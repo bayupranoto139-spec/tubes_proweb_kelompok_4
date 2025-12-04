@@ -23,20 +23,21 @@ session_start();
 <nav class="lux-nav">
   <h2>17 COFFEE</h2>
 
-  <div class="search-container">
-      <form method="GET" action="">
-          <input type="text" name="search" placeholder="Cari menu makanan..."
-                 value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
-          <button type="submit">🔍</button>
-      </form>
-  </div>
-
   <div class="nav-right">
-        <a href="adminHome.php">🏠</a>
-        <a href="adminAddMenu.php">🍽️</a>
-        <a href="isi_pesan.php">✉️</a>
-        <a href="proses_pesanan.php">🧾</a>
+      <a href="adminHome.php">🏠</a>
+      <a href="adminAddMenu.php">🍽️</a>
+      <a href="isi_pesan.php">✉️</a>
+      <a href="proses_pesanan.php">🧾</a>
     </div>
+    
+      <div class="search-container">
+          <form method="GET" action="">
+              <input type="text" name="search" placeholder="Cari menu..."
+                     value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
+              <button type="submit">✧⌕</button>
+          </form>
+      </div>
+
 </nav>
 
 <!-- Hamburger (DI BAWAH NAVBAR, KANAN) -->
