@@ -33,16 +33,35 @@ if (isset($_POST['submit'])) {
 
     <div id="notif-area"></div>
 
-    <?php
-    include 'navbar.php';
-    ?>
+    <nav class="lux-nav">
+  <h2>17 COFFEE</h2>
+
+  <div class="nav-right">
+      <a href="home.php">🏠</a>
+      <a href="food.php">🍽️</a>
+      <a href="drink.php">🥤</a>
+      <a href="contact.php">✉️</a>
+  </div>
+
+  <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="home.php">🏠 Home</a>
+    <a href="food.php">🍽️ Food</a>
+    <a href="drink.php">🥤 Drink</a>
+    <a href="contact.php">✉️ Contact</a>
+</div>
+
 
     <div class="hero-header">
         <img src="foto/kafe.jpg" class="hero-img">
         <div class="hero-overlay"></div>
 
         <div class="hero-text">
-            <h1>Contact Us</h1>
+            <h1>Hubungi Kami</h1>
             <p>Berikan masukan kepada kami ✨</p>
         </div>
     </div>

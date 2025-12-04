@@ -61,6 +61,10 @@ if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "admin") {
 
     </div>
 
+    <?php
+    include 'footer.php';
+    ?>
+
     <script src="cart.js?v=<?= time() ?>"></script>
     <script>
         document.getElementById("navToggle").onclick = function () {

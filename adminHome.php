@@ -20,9 +20,36 @@ session_start();
     <div id="notif-area"></div>
     <div id="confirm-mini" style="display:none;"></div>
 
-    <?php
-    include 'navbarAdmin.php';
-    ?>
+<nav class="lux-nav">
+  <h2>17 COFFEE</h2>
+
+  <div class="search-container">
+      <form method="GET" action="">
+          <input type="text" name="search" placeholder="Cari menu makanan..."
+                 value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
+          <button type="submit">🔍</button>
+      </form>
+  </div>
+
+  <div class="nav-right">
+        <a href="adminHome.php">🏠</a>
+        <a href="adminAddMenu.php">🍽️</a>
+        <a href="isi_pesan.php">✉️</a>
+        <a href="proses_pesanan.php">🧾</a>
+    </div>
+</nav>
+
+<!-- Hamburger (DI BAWAH NAVBAR, KANAN) -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+        <a href="adminHome.php">🏠</a>
+        <a href="adminAddMenu.php">🍽️</a>
+        <a href="isi_pesan.php">✉️</a>
+        <a href="proses_pesanan.php">🧾</a>
+    </div>
+
 
     <!-- HERO -->
     <div class="hero-header">
@@ -70,9 +97,9 @@ session_start();
 
     <!--Footer-->
 
-    <footer class="font">
-        <p> © Copyright by kelompok 5 2025</p>
-    </footer>
+<?php
+include'footer.php';
+?>
 
     <script src="cart.js?v=<?= time() ?>"></script>
     <script>

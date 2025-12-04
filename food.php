@@ -101,6 +101,14 @@ session_start();
     };
   </script>
 
+  <script>
+function toggleNav() {
+    const menu = document.getElementById("mobileMenu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+
 </body>
 
 </html>
