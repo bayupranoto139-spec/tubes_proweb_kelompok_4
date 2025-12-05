@@ -509,6 +509,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 200000;
+    color: black;
 }
 
 /* Background hitam transparan */
