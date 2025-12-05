@@ -19,8 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $stmt->get_result();
 
     if ($row = $result->fetch_assoc()) {
-        // contoh sederhana: password disimpan polos di database
-        // (untuk production sebaiknya gunakan password_hash dan password_verify)
+
         if ($password === $row["password"]) {
             $_SESSION["user_id"] = $row["user_id"];
             $_SESSION["username"] = $row["username"];

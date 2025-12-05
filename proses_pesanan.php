@@ -146,7 +146,7 @@ $orders = mysqli_query($mysql, $sqlOrders);
         }
 
         // ==========================
-        //  DELETE AJAX TANPA PINDAH PAGE
+        //  DELETE AJAX
         // ==========================
         function deleteNow(id) {
 
