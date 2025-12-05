@@ -145,9 +145,7 @@ session_start();
             }, 200);
         }
 
-        // ==========================
-        //  DELETE AJAX TANPA PINDAH PAGE
-        // ==========================
+        //  DELETE AJAX
         function deleteNow(id) {
 
             fetch("adminDelete.php?id=" + id)

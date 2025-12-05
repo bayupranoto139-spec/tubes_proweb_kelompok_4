@@ -10,7 +10,7 @@ if (!isset($_SESSION["role"]) || $_SESSION["role"] !== "admin") {
 // ambil id menu
 $id = $_GET["id"];
 
-// ambil foto dulu agar bisa dihapus dari folder
+// ambil foto agar bisa dihapus dari folder
 $getFoto = $mysql->query("SELECT foto FROM menu WHERE menu_id = $id");
 $foto = $getFoto->fetch_assoc();
 

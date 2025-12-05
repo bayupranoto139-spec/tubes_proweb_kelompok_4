@@ -145,9 +145,6 @@ $orders = mysqli_query($mysql, $sqlOrders);
             }, 200);
         }
 
-        // ==========================
-        //  DELETE AJAX
-        // ==========================
         function deleteNow(id) {
 
             fetch("hapus_pesan.php?id=" + id)

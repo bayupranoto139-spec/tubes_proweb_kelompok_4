@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("loginForm");
   const errorBox = document.getElementById("error");
 
-  // Baca parameter ?error=1 dari URL (di-set oleh login.php kalau gagal)
+  // Baca parameter ?error=1 dari URL
   const params = new URLSearchParams(window.location.search);
   if (params.get("error") === "1") {
     errorBox.textContent = "Username atau kata sandi salah. Coba lagi ya ☕";

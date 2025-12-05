@@ -87,24 +87,24 @@ body {
 .hamburger {
     display: none;
     position: fixed;
-    top: 125px;               /* Tepat di bawah navbar */
-    right: 30px;             /* Di pojok kanan */
+    top: 125px;               
+    right: 30px;             
     font-size: 28px;
     cursor: pointer;
     padding: 8px 12px;
     background: rgba(255,255,255,0.15);
     border-radius: 10px;
     color: white;
-    z-index: 10000 !important; /* SELALU di atas navbar */
+    z-index: 10000 !important; 
     backdrop-filter: blur(10px);
 }
 
 
-/* ===== MOBILE MENU (DROPDOWN ELEGAN) ===== */
+/* ===== MOBILE MENU ===== */
 .mobile-menu {
     display: none;
     position: fixed;
-    top: 190px;  /* jatuh sedikit di bawah hamburger */
+    top: 190px;  
     right: 30px;
     width: 180px;
     background: rgba(255,255,255,0.10);
@@ -499,9 +499,7 @@ body {
 }
 
 
-/* ================================
-   POPUP KONFIRMASI DELETE (ANIMASI)
-   ================================ */
+/*POPUP KONFIRMASI DELETE (ANIMASI)*/
 #confirm-mini {
     position: fixed;
     top: 0;
@@ -512,7 +510,6 @@ body {
     color: black;
 }
 
-/* Background hitam transparan */
 .confirm-overlay {
     position: fixed;
     top: 0;
@@ -666,7 +663,6 @@ body {
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* tambahan style biar halaman sukses rapi */
 .success-box {
     margin: 120px auto;
     max-width: 480px;
@@ -738,7 +734,6 @@ body {
     background: rgba(255, 255, 255, 0.9);
 }
 
-/* make column “Pesan” wrap nicely */
 #tampilan td:last-child {
     max-width: 300px;
     white-space: normal;
@@ -757,7 +752,6 @@ body {
         padding: 10px 12px;
     }
 
-    /* Hide ID column for mobile */
     #tampilan th:first-child,
     #tampilan td:first-child {
         display: none;

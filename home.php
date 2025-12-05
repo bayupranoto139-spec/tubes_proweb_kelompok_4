@@ -46,7 +46,6 @@ session_start();
   </section>
 
 
-  <!-- ABSTRACT MENU SECTION -->
   <section class="menu-section">
     <h2 class="menu-title">Menu Premium Kami</h2>
 

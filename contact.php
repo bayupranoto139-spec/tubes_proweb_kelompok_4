@@ -92,7 +92,6 @@ if (isset($_POST['submit'])) {
     include 'footer.php';
     ?>
 
-    <!-- <script src="contact.js"></script> -->
     <script src="cart.js"></script>
     <script>
         document.getElementById("navToggle").onclick = function () {

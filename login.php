@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    // langsung query tanpa prepare
     $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
     $result = mysqli_query($mysql, $sql);
 
@@ -21,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $row = mysqli_fetch_assoc($result);
 
-        // cek password (plain, sesuai sistemmu)
+        // cek password
         if ($password === $row["password"]) {
             $_SESSION["user_id"] = $row["user_id"];
             $_SESSION["username"] = $row["username"];

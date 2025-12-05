@@ -9,7 +9,7 @@
     </div>
 </nav>
 
-<!-- Hamburger (DI BAWAH NAVBAR, KANAN) -->
+<!-- Hamburger-->
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 
 <!-- Mobile menu -->
